@@ -2,7 +2,6 @@
 
 ![Release](https://flat.badgen.net/packagist/v/bnomei/kirby-content-last-modified?color=ae81ff)
 ![Downloads](https://flat.badgen.net/packagist/dt/bnomei/kirby-content-last-modified?color=272822)
-[![Coverage](https://flat.badgen.net/codeclimate/coverage/bnomei/kirby-content-last-modified)](https://flat.badgen.net/codeclimate/coverage/bnomei/kirby-content-last-modified)
 [![Maintainability](https://flat.badgen.net/codeclimate/maintainability/bnomei/kirby-content-last-modified)](https://codeclimate.com/github/bnomei/kirby-content-last-modified)
 [![Discord](https://flat.badgen.net/badge/discord/bnomei?color=7289da)](https://discordapp.com/users/bnomei)
 
