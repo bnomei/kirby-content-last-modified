@@ -68,6 +68,10 @@ site()->removeFromCacheIfCreatedIsAfterModified('your-cache-name', 'some-cache-k
 site()->removeFromCacheIfCreatedIsAfterModified('your-cache-name', 'some-cache-key');
 ```
 
+### Performance
+
+The core method `site()->modified()` will give you the same timestamp but it will crawl all content files, which might not be the most performant thing to do depending on how much content you have.
+
 ## Settings
 
 | bnomei.content-last-modified. | Default    | Description                                                   |            
