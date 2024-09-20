@@ -1,0 +1,68 @@
+{
+    "name": "bnomei/kirby-content-last-modified",
+    "type": "kirby-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "homepage": "https://github.com/bnomei/kirby-content-last-modified",
+    "description": "Kirby plugin to track the last timestamp when any content was modified at in the full content folder.",
+    "authors": [
+        {
+            "name": "Bruno Meilick",
+            "email": "b@bnomei.com"
+        }
+    ],
+    "keywords": [
+        "kirby",
+        "kirby-cms",
+        "kirby-plugin",
+        "content",
+        "updated",
+        "modified",
+        "changed",
+        "global",
+        "site"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bnomei\\": "classes/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "getkirby/composer-installer": true,
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "getkirby/composer-installer": "^1.2"
+    },
+    "require-dev": {
+        "getkirby/cms": "^4.4.0",
+        "laravel/pint": "^1.13",
+        "pestphp/pest": "^2.24",
+        "spatie/ray": "^1.39"
+    },
+    "scripts": {
+        "analyze": "./vendor/bin/phpstan",
+        "fix": "./vendor/bin/pint",
+        "test": "./vendor/bin/pest",
+        "dist": [
+            "composer fix",
+            "composer install --no-dev --optimize-autoloader",
+            "git rm -rf --cached .; git add .;"
+        ],
+        "kirby": [
+            "composer install",
+            "composer update",
+            "composer install --working-dir=tests/kirby --no-dev --optimize-autoloader",
+            "composer update --working-dir=tests/kirby",
+            "php tests/patch.php"
+        ]
+    },
+    "extra": {
+        "kirby-cms-path": "tests/kirby"
+    }
+}
