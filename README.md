@@ -43,7 +43,7 @@ When you install this plugin it will create a file in the `content` folder of yo
 <?php
 // http://example.com/some-page?last-modified=1726822135
 
-if (site()->contentLastModified()->toInt() > get('last-modified')) {
+if (site()->contentLastModified()->toInt() > intval(get('last-modified'))) {
     kirby()->cache('my-cache')->flush();
 }
 ```
